@@ -1,0 +1,84 @@
+<!--
+ This is the code to show animation using cascaded style sheet (CSS) and basic html tags.
+ When user opens this file on any web browser he can see circles (blue in colour) toggling between top and bottom. 
+ When user moves mouse over them circle will change to square (yellow in colour).
+-->
+
+ 
+<html>
+<head> 
+<style type='text/css'>
+.square {<!--from   w ww . j a va 2s  .c  om-->
+<!--
+ "." represents the class selector, in this case square is a class name.
+ We are assigning height and width of the shape to 80px. The px unit that defines the length, which depends on the type of device and it’s typical use.
+ Border radius lets you round the corners of an element's outer border edge.
+ Transition property specifies the name of the CSS property the transition effect is for.
+ Transition effect occurs when user hover over an element.
+ -->
+
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  background: blue;
+  transition: height 0.5s;
+
+  transition: width 0.5s;
+  transition: border-radius 1s, box-shadow 1s, background 1s;
+  line-height: 75px;
+  text-align: center;
+  display: inline-block;
+  margin: 15px;
+
+  box-shadow: 0;
+  }
+
+.square:hover {
+  border-radius: 0%;
+  box-shadow: 10px 18px 16px -4px #000000;
+  background: yellow;
+  transition: border-radius 0.2s, box-shadow 0.2s, background 0.2s;
+  width:200px;
+  height:200px;
+}
+
+</style> 
+</head>
+<!-- end of the head and beginning of the body section-->
+<body bgcolor="black">
+<!-- 
+Background colour of the screen ,where we are going to display our animation is black.
+We use h2 tag to write title  of the page.
+<i> tag is used to write text in italic.
+-->
+<h2><font color="GREEN" size="10"><i>This is a small animation using css</i></font></h2>
+<h3><font color="Orange" size="6"> Move mouseover circle to see transition</font> </h3> 
+
+<!-- 
+marquee tag is used for scrolling our shapes from top to bottom.
+div tag defines the section or division in a html document.
+-->
+
+<marquee direction="up" height ="400">  
+<div class="square"><font color="white" size="5"> GIT</div>
+</marquee>
+
+<marquee direction="down" height ="400">  
+<div class="square"> <font color="white" size="5"> GIT</div>
+</marquee>
+
+<marquee direction="up" height ="400">
+<div class="square"><font color="white" size="5">GIT</font></div>
+</marquee>
+
+<marquee direction="down" height ="400">  
+<div class="square"><font color="white" size="5">GIT</div>
+</marquee>
+
+<marquee direction="up" height ="400">  
+<div class="square"><font color="white" size="3">GIT</div>
+</marquee>
+
+</body>
+<!--end of the body-->
+</html>
